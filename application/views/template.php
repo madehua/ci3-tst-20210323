@@ -11,10 +11,10 @@
 	<!-- <meta name="viewport" content="width=1200, initial-scale=1.0"> -->
 
 
-	<title>贵州铜仁金鑫矿业有限公司</title>
+	<title><?= isset($title) ? $title : ''; ?></title>
 	<link rel="stylesheet" href="/css/swiper.min.css">
 	<link rel="stylesheet" href="/css/app.css">
-	<script type="text/javascript" src="/js/jquery1.42.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript" src="/js/jquery.SuperSlide.2.1.3.js"></script>
 	<script type="text/javascript" src="/js/swiper.min.js"></script>
 
@@ -37,9 +37,9 @@
 <div class="shouy_daoh">
 	<div class="px1200">
 		<ul class="daoh_ul">
-			<li><a href="<?=base_url('/')?>">网站首页</a></li>
-			<li><a href="<?=base_url('news')?>">公司新闻</a></li>
-			<li><a href="LianX.html">联系我们</a></li>
+			<li><a href="<?= base_url('/') ?>">首页</a></li>
+			<li><a href="<?= base_url('blog') ?>">博客</a></li>
+			<li><a href="<?= base_url('blog/create') ?>">添加</a></li>
 		</ul>
 		<div class="sous_k">
 			<input type="text" placeholder="请输入关键词">
@@ -47,7 +47,7 @@
 	</div>
 </div>
 <div style="padding: 10px">
-<?= $contents; ?>
+	<?= $contents; ?>
 </div>
 <!-- 底部 -->
 <div class="fooder_kuang">
